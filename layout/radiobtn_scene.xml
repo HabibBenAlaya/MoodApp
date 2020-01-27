@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scene_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RadioGroup
+            android:id="@+id/radio_group_question2"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quotidiennement"
+                android:id="@+id/question_radioButton12"
+                android:layout_marginBottom="16dp"
+                android:buttonTint="@color/sopra_red"
+                android:checked="false"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Une à deux fois par semaine"
+                android:id="@+id/question_radioButton22"
+                android:layout_marginBottom="16dp"
+                android:buttonTint="@color/sopra_red"
+                android:checked="false"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ponctuellement"
+                android:id="@+id/question_radioButton32"
+                android:layout_marginBottom="16dp"
+                android:buttonTint="@color/sopra_red"
+                android:checked="false"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aussi souvent que possible pour travailler efficacement"
+                android:id="@+id/question_radioButton42"
+                android:layout_marginBottom="16dp"
+                android:buttonTint="@color/sopra_red"
+                android:checked="false"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rarement"
+                android:id="@+id/question_radioButton52"
+                android:buttonTint="@color/sopra_red"
+                android:checked="false"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/et_replibre_question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Réponse libre"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:textColor="@color/black"/>
+
+        </RadioGroup>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

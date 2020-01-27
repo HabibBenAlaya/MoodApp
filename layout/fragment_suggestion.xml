@@ -1,0 +1,103 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.soprahr.moodapp.fragments.SuggestionFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/sopra_red">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@color/white"
+            android:text="Exprimez-vous..."
+            android:textSize="40sp"
+            android:typeface="serif"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/rl_title"
+        android:layout_above="@+id/btn_envoyer_sugg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/et_type_sugg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/sopra_red"
+        android:textColor="@color/sopra_red"
+        android:backgroundTint="@color/sopra_red"
+        android:focusable="false"
+        android:hint="Type de message" />
+
+    <EditText
+        android:id="@+id/et_sujet_sugg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@color/sopra_red"
+        android:textColor="@color/sopra_red"
+        android:backgroundTint="@color/sopra_red"
+        android:focusable="false"
+        android:hint="Sujet"/>
+
+        <EditText
+            android:id="@+id/et_titre_sugg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@color/sopra_red"
+            android:textColor="@color/sopra_red"
+            android:backgroundTint="@color/sopra_red"
+            android:hint="Titre" />
+
+
+    <EditText
+        android:id="@+id/et_desc_sugg"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@color/sopra_red"
+        android:textColor="@color/sopra_red"
+        android:backgroundTint="@color/sopra_red"
+        android:gravity="top"
+        android:hint="Vos souhaits..."
+        android:fitsSystemWindows="true"
+        android:breakStrategy="balanced"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_envoyer_sugg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_centerInParent="true"
+        android:text="Envoyer"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@color/sopra_orange"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
+
+</FrameLayout>

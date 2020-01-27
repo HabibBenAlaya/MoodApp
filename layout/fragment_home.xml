@@ -1,0 +1,347 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context="com.soprahr.moodapp.fragments.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sopra_red">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/white"
+                android:text="Comment te sens-tu aujourd'hui ? "
+                android:textSize="24sp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_above="@+id/ll_btns_home"
+            android:layout_below="@+id/rl1">
+            <RadioGroup
+                android:id="@+id/radio_group_question"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quotidiennement"
+                    android:id="@+id/question_radioButton1"
+                    android:layout_marginBottom="16dp"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Une à deux fois par semaine"
+                    android:id="@+id/question_radioButton2"
+                    android:layout_marginBottom="16dp"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ponctuellement"
+                    android:id="@+id/question_radioButton3"
+                    android:layout_marginBottom="16dp"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aussi souvent que possible pour travailler efficacement"
+                    android:id="@+id/question_radioButton4"
+                    android:layout_marginBottom="16dp"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rarement"
+                    android:id="@+id/question_radioButton5"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/et_replibre_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Réponse libre"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:textColor="@color/black"/>
+
+                <com.soprahr.moodapp.utils.BubbleSeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:bsb_second_track_color="@color/color_blue"
+                    app:bsb_section_count="10"
+                    app:bsb_section_text_position="below_section_mark"
+                    app:bsb_touch_to_seek="true"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"/>
+
+            </RadioGroup>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btns_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_prev_quest_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_marginRight="1dp"
+                android:text="précédent"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@color/sopra_orange"
+                />
+
+            <Button
+                android:id="@+id/btn_next_quest_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_marginLeft="1dp"
+                android:text="suivant"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@color/sopra_orange"
+                />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_questions_termine"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sondage_merci2"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:id="@+id/rl_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_humeur1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp">
+                    <TextView
+                        android:id="@+id/tv_humeur1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Votre humeur aujourd'hui"
+                        android:textColor="@color/sopra_red"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/circularProgressbar1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="15"
+                        android:layout_centerInParent="true"
+                        android:progressDrawable="@drawable/circular"
+                        android:secondaryProgress="100"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_percent1"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:gravity="center"
+                        android:text="2"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/sopra_red"
+                        android:textSize="50sp" />
+                    <ImageView
+                        android:id="@+id/img_result_mood1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/img_tresmal_m"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_humeur2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp">
+                    <TextView
+                        android:id="@+id/tv_votrehumeur2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Humeur de l'entreprise aujourd'hui"
+                        android:textColor="@color/sopra_red"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"/>
+
+                    <ProgressBar
+                        android:id="@+id/circularProgressbar2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="67"
+                        android:layout_centerInParent="true"
+                        android:progressDrawable="@drawable/circular"
+                        android:secondaryProgress="100"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_percent2"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:gravity="center"
+                        android:text="2"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/sopra_red"
+                        android:textSize="50sp" />
+                    <ImageView
+                        android:id="@+id/img_result_mood2"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/img_super_m"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_humeur3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp">
+                    <TextView
+                        android:id="@+id/tv_votrehumeur3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Humeur de l'entreprise cette semaine"
+                        android:textColor="@color/sopra_red"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"/>
+
+                    <ProgressBar
+                        android:id="@+id/circularProgressbar3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="55"
+                        android:layout_centerInParent="true"
+                        android:progressDrawable="@drawable/circular"
+                        android:secondaryProgress="100"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_percent3"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:gravity="center"
+                        android:text="2"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/sopra_red"
+                        android:textSize="50sp" />
+                    <ImageView
+                        android:id="@+id/img_result_mood3"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/img_ok_m"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scene_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.soprahr.moodapp.utils.BubbleSeekBar
+        android:id="@+id/demo_4_seek_bar_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:bsb_second_track_color="@color/color_blue"
+        app:bsb_section_count="10"
+        app:bsb_section_text_position="below_section_mark"
+        app:bsb_touch_to_seek="true"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

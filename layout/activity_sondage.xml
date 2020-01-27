@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context=".SondageActivity">
+
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/toolbar_layout_sondage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.Dark.AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_sondage"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/sopra_red"
+        app:popupTheme="@style/AppTheme.Dark.PopupOverlay" >
+
+        <ImageButton
+            android:id="@+id/validate_sondage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_validate_white"
+            android:layout_gravity="right"/>
+        <ImageButton
+            android:id="@+id/cancel_sondage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/ic_cancel_white"
+
+            android:layout_gravity="left"/>
+        <TextView
+            android:id="@+id/nbr_question_sondage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 1"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sopra_red">
+
+            <TextView
+                android:id="@+id/tv_question_sondage"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textColor="@color/white"
+                android:text="A quelle fréquence souhaiteriez-vous utiliser cet espace, si votre emploi du temps le permet ?"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_above="@+id/ll_btns"
+            android:layout_below="@+id/rl1">
+
+            <RadioGroup
+                android:id="@+id/radio_group_sondage"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quotidiennement"
+                    android:id="@+id/radioButton1"
+                    android:layout_marginBottom="16dp"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Une à deux fois par semaine"
+                    android:id="@+id/radioButton2"
+                    android:layout_marginBottom="16dp"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ponctuellement"
+                    android:id="@+id/radioButton3"
+                    android:layout_marginBottom="16dp"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aussi souvent que possible pour travailler efficacement"
+                    android:id="@+id/radioButton4"
+                    android:layout_marginBottom="16dp"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rarement"
+                    android:id="@+id/radioButton5"
+                    android:buttonTint="@color/sopra_red"
+                    android:checked="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/et_replibre_sondage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Réponse libre"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+            </RadioGroup>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_prev_quest_sond"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_marginRight="1dp"
+                android:text="précédent"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@color/sopra_orange"
+                />
+
+            <Button
+                android:id="@+id/btn_next_quest_sond"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_marginLeft="1dp"
+                android:text="suivant"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@color/sopra_orange"
+                />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_sondage_termine"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sondage_merci2"
+        android:visibility="gone"/>
+
+</android.support.design.widget.CoordinatorLayout>

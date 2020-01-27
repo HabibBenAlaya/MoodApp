@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/sopra_red"
+    android:descendantFocusability="afterDescendants"
+    android:weightSum="6" >
+
+    <ImageView
+        android:id="@+id/img_notification"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:src="@drawable/ic_edit_profile" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="1dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_titre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bengi Egima"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hello, whats up?"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_alignParentRight="true"
+        android:text="10:45"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+</LinearLayout>
